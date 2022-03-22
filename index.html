@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" href="img/burgericon-2.png">
+<div class="lds-grid">
+   <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+   </div>
+</div>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Primary Meta Tags -->
+<title>Burger Project</title>
+<meta name="title" content="Burger Project">
+<meta name="description" content="Zaw Lwin Phyo's Burger Master Project">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="Burger Project">
+<meta property="og:description" content="Zaw Lwin Phyo's Burger Master Project">
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="Burger Project">
+<meta property="twitter:description" content="Zaw Lwin Phyo's Burger Master Project">
+
+      <title>Burger Master</title>
+      <style>
+         .lds-grid {
+         display: flex;
+         position:fixed;
+         top: 0;
+         width: 100%;
+         height: 100vh;
+         background-color:black;
+         z-index: 3000;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         }
+         .loader{
+         width: 100px;
+         height: 100px;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         }
+         .loader div {
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         border-radius: 50%;
+         background: #feb062;
+         animation: lds-grid 1.2s linear infinite;
+         }
+         .lds-grid div:nth-child(1) {
+         top: 8px;
+         left: 8px;
+         animation-delay: 0s;
+         }
+         .lds-grid div:nth-child(2) {
+         top: 8px;
+         left: 32px;
+         animation-delay: -0.4s;
+         }
+         .lds-grid div:nth-child(3) {
+         top: 8px;
+         left: 56px;
+         animation-delay: -0.8s;
+         }
+         .lds-grid div:nth-child(4) {
+         top: 32px;
+         left: 8px;
+         animation-delay: -0.4s;
+         }
+         .lds-grid div:nth-child(5) {
+         top: 32px;
+         left: 32px;
+         animation-delay: -0.8s;
+         }
+         .lds-grid div:nth-child(6) {
+         top: 32px;
+         left: 56px;
+         animation-delay: -1.2s;
+         }
+         .lds-grid div:nth-child(7) {
+         top: 56px;
+         left: 8px;
+         animation-delay: -0.8s;
+         }
+         .lds-grid div:nth-child(8) {
+         top: 56px;
+         left: 32px;
+         animation-delay: -1.2s;
+         }
+         .lds-grid div:nth-child(9) {
+         top: 56px;
+         left: 56px;
+         animation-delay: -1.6s;
+         }
+         @keyframes lds-grid {
+         0%, 100% {
+         opacity: 1;
+         }
+         50% {
+         opacity: 0.5;
+         }
+         }
+      </style>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+      <link rel="stylesheet" href="vendor/animate_it/animate.css">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+      <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+      <link rel="stylesheet" href="vendor/slick/slick.css">
+      <link rel="stylesheet" href="vendor/animate_it/animate.css">
+   </head>
+   <body>
+      <header class="container-fluid bg-dark nav-section wow animate__fadeInDown ">
+         <div class="row">
+            <div action="" class="search-part" id="search-part">
+               <i class="feather-search text-secondary position-absolute"></i>
+               <input type="text" class="form-control search-bar ">
+            </div>
+            <div class="col-2 d-md-none d-lg-flex d-none justify-content-center align-items-center wow animate__fadeInLeft ts-2">
+               <i class="feather-search text-light mt-1 nav-edge-icon" id="search"></i>
+            </div>
+            <div class="col-md-8 col-12 navbar navbar-expand-lg navbar-light bg-dark ">
+               <div class="navbar-brand  d-flex d-md-flex d-lg-none align-items-center justify-content-between" >
+                  <img src="img/burgericon-2.png"  alt=""  class="wow animate__rotateIn ts-2">
+                  <h5 class="text-secondary mt-1 ml-3 wow animate__bounceIn ts-1">Burger Master</h5>
+               </div>
+               <button class="navbar-toggler wow animate__fadeIn ts-3 " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto w-100 justify-content-between">
+                     <li class="nav-item mt-1">
+                        <a class="nav-link wow animate__fadeIn ts-2 active-1" href="#home" >Home</a>
+                     </li>
+                     <li class="nav-item mt-1">
+                        <a class="nav-link wow animate__fadeIn ts-2" href="#about">About</a>
+                     </li>
+                     <li class="nav-item  mt-1">
+                        <a class="nav-link wow animate__fadeIn ts-2" href="#special" >
+                        Dishes
+                        </a>
+                     </li>
+                     <div class="navbar-brand  d-none d-md-none d-lg-flex align-items-center justify-content-between " >
+                        <img src="img/burgericon-2.png"  alt="" class="wow animate__rotateIn ts-4">
+                        <h5 class="text-secondary mt-1 ml-3 wow animate__bounceIn ts-3">Burger Master</h5>
+                     </div>
+                     <li class="nav-item mt-1">
+                        <a class="nav-link wow animate__fadeIn ts-2" href="#blog">Menu</a>
+                     </li>
+                     <li class="nav-item mt-1 ">
+                        <a class="nav-link wow animate__fadeIn ts-2" href="#decoration">Decoration</a>
+                     </li>
+                     <li class="nav-item mt-1">
+                        <a class="nav-link wow animate__fadeIn ts-2" href="#contact">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-2 d-md-none d-none d-lg-flex justify-content-center align-items-center wow animate__fadeInRight ts-2 d-none shop-btn"><i class="feather-shopping-cart text-light nav-edge-icon mt-1 " id="shop"></i></div>
+         </div>
+      </header>
+      <section class="container-fluid home-section vh-100" id="home">
+         <div class="row">
+            <div class="container">
+               <div class="row  home-box  shadow-lg bg-dark" style="margin-top: 100px;">
+                  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" >
+                     <ol class="carousel-indicators my-4 wow animate__fadeIn ts-5">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="col-12 flex-column-reverse flex-md-column-reverse flex-lg-row d-flex align-items-center justify-content-between bg-dark ">
+                              <div class="ml-5 wow animate__fadeInLeft ts-2" >
+                                 <p class="text-light ml-2">01</p>
+                                 <h6 class="text-secondary display-4 mb-4 mt-3">Burger</h6>
+                                 <p class=" text-light" style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam rerum repudiandae nobis necessitatibus</p>
+                                 <button class="btn btn-outline-secondary mt-4 mb-5">See More</button>
+                                 <div class="social-icon">
+                                    <div class="line"></div>
+                                    <a href=""><i class="feather-facebook"></i></a>
+                                    <a href=""><i class="feather-instagram"></i></a>
+                                    <a href=""><i class="feather-twitter"></i></a>
+                                    <a href=""><i class="feather-github"></i></a>
+                                 </div>
+                              </div>
+                              <div>
+                                 <img src="img/burger1.png" class="wow animate__fadeInRight ts-3" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="col-12  flex-column-reverse flex-md-column-reverse flex-lg-row d-flex align-items-center justify-content-around bg-dark">
+                              <div class="ml-5" >
+                                 <p class="text-light ml-2">02</p>
+                                 <h6 class="text-secondary display-4 mb-4 mt-3">Coffee</h6>
+                                 <p class=" text-light" style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam rerum repudiandae nobis necessitatibus</p>
+                                 <button class="btn btn-outline-secondary mt-4 mb-5">See More</button>
+                                 <div class="social-icon">
+                                    <div class="line"></div>
+                                    <a href=""><i class="feather-facebook"></i></a>
+                                    <a href=""><i class="feather-instagram"></i></a>
+                                    <a href=""><i class="feather-twitter"></i></a>
+                                    <a href=""><i class="feather-github"></i></a>
+                                 </div>
+                              </div>
+                              <img src="img/coffee2.png" class="" alt="">
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="col-12  flex-column-reverse flex-md-column-reverse flex-lg-row d-flex align-items-center justify-content-around bg-dark">
+                              <div class="ml-5" >
+                                 <p class="text-light ml-2">03</p>
+                                 <h6 class="text-secondary display-4 mb-4 mt-3">Fruit Salad</h6>
+                                 <p class=" text-light" style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam rerum repudiandae nobis necessitatibus</p>
+                                 <button class="btn btn-outline-secondary mt-4 mb-5">See More</button>
+                                 <div class="social-icon">
+                                    <div class="line"></div>
+                                    <a href=""><i class="feather-facebook"></i></a>
+                                    <a href=""><i class="feather-instagram"></i></a>
+                                    <a href=""><i class="feather-twitter"></i></a>
+                                    <a href=""><i class="feather-github"></i></a>
+                                 </div>
+                              </div>
+                              <img src="img/pngegg (2).png" class="" alt="">
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="col-12  flex-column-reverse flex-md-column-reverse flex-lg-row d-flex align-items-center justify-content-around bg-dark">
+                              <div class="ml-5" >
+                                 <p class="text-light ml-2">04</p>
+                                 <h6 class="text-secondary display-4 mb-4 mt-3">Pizza</h6>
+                                 <p class=" text-light" style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam rerum repudiandae nobis necessitatibus</p>
+                                 <button class="btn btn-outline-secondary mt-4 mb-5">See More</button>
+                                 <div class="social-icon">
+                                    <div class="line"></div>
+                                    <a href=""><i class="feather-facebook"></i></a>
+                                    <a href=""><i class="feather-instagram"></i></a>
+                                    <a href=""><i class="feather-twitter"></i></a>
+                                    <a href=""><i class="feather-github"></i></a>
+                                 </div>
+                              </div>
+                              <img src="img/pngegg (10).png" class="" alt="" >
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a href="#about" class="scroll-btn shadow wow animate__bounceIn animate-delay-4">
+            <img src="img/mouse.png" alt="" style="width: 15px;animation-iteration-count: infinite;" class="wow animate__bounce" >
+            </a>
+         </div>
+         </div>
+      </section>
+      <section class="container-fluid about-section" id="about">
+         <div class="row vh-100 position-relative flex-md-row first-row">
+            <div class=" about-img shadow-lg wow animate__fadeIn ">
+            </div>
+            <div class="col-md-6 col-12 d-flex justify-content-center align-items-center about-first-part">
+            </div>
+            <div class="col-md-6 col-12 bg-dark about-second-part d-flex justify-content-center align-items-center">
+               <div>
+                  <h6 class="text-secondary display-4 mb-4 mt-3 wow animate__fadeIn ts-2">
+                     Why Choose Us
+                  </h6>
+                  <p class=" text-light wow animate__fadeIn ts-3" style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam rerum repudiandae nobis necessitatibus</p>
+                  <div class="d-flex mt-5 wow animate__fadeIn ts-4">
+                     <div class="about-icon-box d-flex">
+                        <img src="img/motorbike.png" alt="" style="width: 50px;height: 50px;">
+                        <span class="mt-2">Free Delivery</span>
+                     </div>
+                     <div class="about-icon-box mx-5">
+                        <img src="img/wallet.png" alt="" style="width: 50px;height: 50px;">
+                        <span class="mt-2">Easy payments</span>
+                     </div>
+                     <div class="about-icon-box">
+                        <img src="img/24-hours.png" alt="" style="width: 50px;height: 50px;">
+                        <span class="mt-2">24/7 Services</span>
+                     </div>
+                  </div>
+                  <button class="btn btn-outline-secondary mt-5 wow animate__fadeIn ts-2 ts-5">Read More</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid special-section" id="special">
+         <div class="row vh-100 first-row">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 text-center ">
+                     <h1 class="mt-4 wow animate__fadeIn ts-1">Special Dishes</h1>
+                     <div class="d-flex justify-content-center align-items-center mt-2">
+                        <div class="line-2 wow animate__fadeIn ts-1"></div>
+                        <img src="img/star.png" class="mx-2 wow animate__fadeIn ts-1" style="width: 10px;height: 10px;" alt="">
+                        <div class="line-2 wow animate__fadeIn ts-1"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-1">
+                        <img src="img/burger-6859072_1920.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/burger (2).png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Tasty Burger</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-2">
+                        <img src="img/pizza jp.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/pizza.png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Tasty Pizza</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-3">
+                        <img src="img/f73399bf34e3282bb8e194d608c2fe5b.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/coffee-cup.png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Natural Coffee</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-6">
+                        <img src="img/89bad4878f867f89c0d60caa3a47128a.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/ice-cream.png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Ice Cream</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-5">
+                        <img src="img/drink-3331913_1920.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/poinsettia.png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Cold Drink</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-12 mt-md-4 mt-2 ">
+                     <div class="box bg-dark text-center wow animate__fadeIn ts-4">
+                        <img src="img/bread-1284438_1920.jpg" alt="" class="special-dish-img">
+                        <div class="content  py-4 px-3">
+                           <img src="img/cereals.png" alt="" style="width: 50px;height: 50px;">
+                           <h5 class="text-secondary my-3">Healthy Breakfast</h5>
+                           <p class="text-light">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, odit animi quis impedit repudiandae enim officiis totam ipsam voluptatum  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid blog-section" id="blog">
+         <div class="row vh-100 first-row">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 text-center wow animate__rotateIn ts-2" style="margin-bottom: 30px;">
+                     <h1 class="text-secondary">Our Menu</h1>
+                     <div class="d-flex justify-content-center align-items-center mt-2">
+                        <div class="line-3"></div>
+                        <img src="img/star.png" class="mx-2" style="width: 10px;height: 10px;" alt="">
+                        <div class="line-3"></div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-0 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-one box-two bg-dark rounded wow animate__fadeInLeft">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (11).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Burger</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-0 mt-2  d-flex justify-content-between flex-column">
+                     <div class="box-two-two box-two bg-dark rounded wow animate__fadeInLeft">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (23).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Fried Chicken</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-0 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-three box-two bg-dark rounded wow animate__fadeInLeft">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (24).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">ice-cream</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-0 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-four box-two bg-dark rounded wow animate__fadeInLeft">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (14).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Pizza</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-3 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-five box-two bg-dark rounded wow animate__fadeInRight">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (15).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Cappuccino</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-3 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-six box-two bg-dark rounded wow animate__fadeInRight">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (16).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Sandwich</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-3 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-seven box-two bg-dark rounded wow animate__fadeInRight">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (17).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Fruit Yogurt</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-12 rounded text-center mt-md-3 mt-2 d-flex justify-content-between flex-column">
+                     <div class="box-two-eight box-two bg-dark rounded wow animate__fadeInRight">
+                        <div style="width: 100%;" class="text-center">
+                           <img src="img/pngegg (20).png" style="width: 200px;height: 200px;" alt="">
+                        </div>
+                        <div class="menu-content mb-4" style="width: 100%;">
+                           <h6 class="text-light">Smothiee</h6>
+                           <span class="text-light">$50</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="menu-preview ">
+               <div class="preview preview-one ">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (11).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-two">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (23).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Fried Chicken</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-three">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (24).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Ice-Cream</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-four">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (14).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-five">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (15).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-six">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (16).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-seven">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (17).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+               <div class="preview preview-eight">
+                  <i class="feather-x cross text-secondary"></i>
+                  <img src="img/pngegg (20).png" alt="">
+                  <div>
+                     <h6 class="text-secondary">Burger</h6>
+                     <div class="my-3">
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                        <i class="feather-star text-secondary"></i>
+                     </div>
+                     <button class="btn btn-outline-secondary mb-2">Buy Now</button>
+                     <button class="btn btn-secondary text-dark mb-2">Add To Cart</button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-12 text-center mt-3 wow animate__rotateIn ts-2">
+               <div class="btn btn-outline-secondary">See More</div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid decoration-section" id="decoration">
+         <div class="row  decoration-first-row ">
+            <div class="col-12 text-center decoration-header wow animate__rotateIn ts-1">
+               <h1 class=" text-secondary mt-md-5 mt-1">Our Decoration</h1>
+               <div class="d-flex justify-content-center align-items-center mt-2">
+                  <div class="line-3"></div>
+                  <img src="img/star.png" class="mx-2" style="width: 10px;height: 10px;" alt="">
+                  <div class="line-3"></div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row slick-price py-3">
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInUp ts-2" >
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/ce5d6e308fdda1cf86f35184de149d2e.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 1</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInDown ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/4a729a964f68aee6fb318da34d55ea7d.jpg" alt="" class="decoration-img"  style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 2</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInUp ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/f8a70144eb881afe78df0164e657e966.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 3</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInDown ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/0f790f963ce87de542438e4b2282925d.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 4</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInUp ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/a4a211b92e8d2a70b2798ca367a3804b.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 5</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInDown ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/f67ee4d50bbb7fcff939d3bd5abdc833.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 6</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInUp ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/dc-7.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 7</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-12 mt-md-5 mt-3 wow animate__backInDown ts-2">
+                     <div class="card bg-dark overflow-hidden">
+                        <img src="img/dc-8.jpg" alt="" class="decoration-img" style="width: 100%;height: 170px;">
+                        <div class="card-body">
+                           <h4 class="text-light">Decoration 8</h4>
+                           <p class="text-light my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam esse ratione ?</p>
+                           <div class="btn btn-outline-secondary mt-2">Read More</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </section>
+      <section class="container-fluid contact-section" id="contact">
+         <div class="row vh-100 first-row">
+            <div class="col-12 text-center decoration-header wow animate__rotateIn">
+               <h1 class=" text-secondary mt-md-5 mt-1">Contact Us</h1>
+               <div class="d-flex justify-content-center align-items-center mt-2">
+                  <div class="line-3"></div>
+                  <img src="img/star.png" class="mx-2" style="width: 10px;height: 10px;" alt="">
+                  <div class="line-3"></div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6 col-12 wow animate__fadeInLeft ts-2">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.021604027302!2d92.89336521483912!3d20.133146286490298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b04f766f49c4d5%3A0x374a56def74d7b28!2sCountry%20House!5e0!3m2!1smy!2smm!4v1645555855299!5m2!1smy!2smm" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  <div class="col-md-6 col-12">
+                     <div class="d-flex mt-4 justify-content-md-around flex-md-row flex-column align-items-start wow animate__fadeInRight ts-3">
+                        <div class="about-icon-box d-flex flex-md-column flex-row">
+                           <img src="img/telephone-call.png" alt="" style="width: 40px;height: 40px;">
+                           <span class="mt-2 text-light ml-md-0 ml-3">Phone :</span>
+                           <span class="text-light mt-2 ml-md-0 ml-3">09254169207</span>
+                        </div>
+                        <div class="about-icon-box mx-md-5 flex-md-column flex-row my-md-0 my-3">
+                           <img src="img/envelope.png" alt="" style="width: 40px;height: 40px;">
+                           <span class="mt-2 text-light  ml-md-0 ml-3">Email :</span>
+                           <span class="text-light mt-2  ml-md-0 ml-3">lin87246@gmail.com</span>
+                        </div>
+                        <div class="about-icon-box flex-md-column flex-row">
+                           <img src="img/location.png" alt="" style="width: 40px;height: 40px;">
+                           <span class="mt-2 text-light  ml-md-0 ml-3">Address :</span>
+                           <span class="text-light mt-2  ml-md-0 ml-3">Sittwe-Pyitawtha</span>
+                        </div>
+                     </div>
+                     <div class="text-md-center text-left">
+                        <h4 class="text-light my-4 text-uppercase wow animate__fadeIn ts-4">Get In Touch</h4>
+                        <input type="text" class="form-control text-secondary bg-transparent btn-outline-secondary wow animate__backInUp ts-5" placeholder="Name">
+                        <input type="text" class="form-control text-secondary bg-transparent btn-outline-secondary my-2 wow animate__backInUp ts-5" placeholder="Number">
+                        <input type="text" class="form-control text-secondary my-2 bg-transparent btn-outline-secondary wow animate__backInUp ts-5" placeholder="Email">
+                        <textarea class="form-control bg-transparent btn-outline-secondary wow animate__backInUp ts-5" cols="30" rows="5" placeholder="Message"></textarea>
+                        <button class="btn btn-outline-secondary mt-3 wow animate__backInUp ts-5">Send Message</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="vendor/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/slick/slick.js"></script>
+      <script src="vendor/wow/wow.js"></script>
+      <script src="vendor/way_point/jquery.waypoints.min.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>
